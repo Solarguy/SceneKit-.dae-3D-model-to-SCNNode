@@ -8,4 +8,5 @@
     NSURL *urlToColladaFile = [[NSBundle mainBundle] URLForResource:path withExtension:@"dae"];	// Create NSURL from input path
     SCNSceneSource *sceneSource = [[SCNSceneSource alloc] initWithURL:urlToColladaFile options:nil];	// Create a temporary SCNScene
     SCNNode *node = [sceneSource entryWithIdentifier:identifier withClass:[SCNNode class]];	// Create a node from the model represented by the identifier
+    return node;
 }
